@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'methadone'
+
+require_relative '../config/environment.rb'#!/usr/bin/env rubyeequire_relative '../config/environment.rb'
+
+include Methadone::Main
+include Methadone::CLILogging
+include Methadone::Rails
+include Methadone::SH
+
+main do # |arg1, arg2| list arguments here
+  enable_active_record_logging if options[:debug]
+
+  # Do command here
+
+end
+
+# Declaire command interface here
+
+description "Describe your command"
+
+# Accept flags via:
+# on("--flag VAL","Some flag")
+# options[flag] will contain VAL
+#
+# Specify switches via:
+# on("--[no-]switch","Some switch")
+
+on("--debug","Show ActiveRecord logs")
+
+# Require an argument
+# arg :some_arg.
+#
+# # Make an argument optional
+# arg :optional_arg, :optional
+
+go!
+
