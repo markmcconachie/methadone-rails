@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   s.description = "Generate bin commands for your rails app using Methadone "
 
   s.files         = `git ls-files`.split($/)
-  s.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  s.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
 
   s.add_dependency "rails", "~> 3.2.12"
