@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.summary     = "Generate bin commands for your rails app using Methadone."
   s.description = "Generate bin commands for your rails app using Methadone "
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  s.files         = `git ls-files`.split($/)
+  s.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  s.require_paths = ["lib"]
 
   s.add_dependency "rails", "~> 3.2.12"
   s.add_dependency "methadone"
