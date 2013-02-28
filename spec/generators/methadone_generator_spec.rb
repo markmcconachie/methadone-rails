@@ -24,5 +24,20 @@ describe MethadoneGenerator do
         expect(File.executable?(subject)).to be_true
       end
     end
+
+    describe "the cucumber feature" do
+      subject { file 'features/bin/command.feature' }
+
+      it { should exist }
+      it { should contain 'Feature: My bin command works' }
+      it { should contain 'Scenario: The command runs' }
+    end
+
+    describe "the cucumber steps" do
+      subject { file 'features/step_definitions/command_command_steps.rb' }
+
+      it { should exist }
+      it { should contain '# Put your step definitions here' }
+    end
   end
 end
