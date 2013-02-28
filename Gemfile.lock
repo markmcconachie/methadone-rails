@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    methadone-rails (0.0.1)
+    methadone-rails (0.1.0)
       methadone
       rails (~> 3.2.12)
 
